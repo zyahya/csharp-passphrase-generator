@@ -1,0 +1,45 @@
+﻿using System.Reflection;
+
+namespace PassphraseGenerator;
+
+public class GeneratePassphrase
+{
+    public List<string> RetrieveWordlistData()
+    {
+        var words = new List<string>();
+        var assembly = Assembly.GetExecutingAssembly();
+        var resourceName = "PassphraseGenerator.Data.eff_short_wordlist_1.txt";
+
+        using var stream = assembly.GetManifestResourceStream(resourceName);
+        using var reader = new StreamReader(stream!);
+
+        while (!reader.EndOfStream)
+        {
+            words.Add(reader.ReadLine()!);
+        }
+
+        return words;
+    }
+
+    public string[] SelectRandomWords()
+    {
+        var words = RetrieveWordlistData();
+
+        string[] result = Random.Shared.GetItems(words.ToArray(), 5);
+
+        return result;
+    }
+
+    public string JoinWords(string[] words, string separator = "-")
+    {
+        return string.Join(separator, words);
+    }
+
+    public string Generate()
+    {
+        var words = SelectRandomWords();
+        var passphrase = JoinWords(words, "-");
+
+        return passphrase;
+    }
+}
