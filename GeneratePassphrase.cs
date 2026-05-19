@@ -21,11 +21,11 @@ public class GeneratePassphrase
         return words;
     }
 
-    public string[] SelectRandomWords()
+    public string[] SelectRandomWords(int count = 5)
     {
         var words = RetrieveWordlistData();
 
-        string[] result = Random.Shared.GetItems(words.ToArray(), 5);
+        string[] result = Random.Shared.GetItems(words.ToArray(), count);
 
         return result;
     }
@@ -35,9 +35,9 @@ public class GeneratePassphrase
         return string.Join(separator, words);
     }
 
-    public string Generate()
+    public string Generate(int count = 5)
     {
-        var words = SelectRandomWords();
+        var words = SelectRandomWords(count);
         var passphrase = JoinWords(words, "-");
 
         return passphrase;
