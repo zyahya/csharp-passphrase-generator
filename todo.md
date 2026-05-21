@@ -1,0 +1,6 @@
+- [ ] Add option to choose the type of the wordlist (large, short1 or short2)
+- [ ] Add option to specify the separator (default: "-")
+- [ ] Add version and help options
+- [ ] Add option to clip to clipboard automatically
+- [ ] Write the readme file
+- [ ] Record a video to demonstrate the tool (in gif format)
