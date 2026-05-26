@@ -1,6 +1,6 @@
 ﻿using System.Reflection;
 
-namespace PassphraseGenerator;
+namespace SecurePhrase.Core;
 
 public class GeneratePassphrase
 {
@@ -8,7 +8,7 @@ public class GeneratePassphrase
     {
         var words = new List<string>();
         var assembly = Assembly.GetExecutingAssembly();
-        var resourceName = "PassphraseGenerator.Data.eff_short_wordlist_1.txt";
+        var resourceName = "SecurePhrase.Core.Data.eff_short_wordlist_1.txt";
 
         using var stream = assembly.GetManifestResourceStream(resourceName);
         using var reader = new StreamReader(stream!);

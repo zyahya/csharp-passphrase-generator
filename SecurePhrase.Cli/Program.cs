@@ -1,4 +1,4 @@
-﻿using PassphraseGenerator;
+﻿using SecurePhrase.Core;
 
 var gen = new GeneratePassphrase();
 string passphrase;
