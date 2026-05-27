@@ -7,3 +7,4 @@
 - [ ] Publish core layer on nuget
   - [ ] Build github action to automate the publishing process
 - [ ] Build github action to build the complete project for win, mac and linux
+- [ ] Add readme file to the package in nuget
