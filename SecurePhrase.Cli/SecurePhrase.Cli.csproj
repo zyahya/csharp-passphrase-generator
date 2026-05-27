@@ -14,7 +14,7 @@
     <Authors>Ziad Yahya</Authors>
     <Description>A fast, offline passphrase generator for the terminal.</Description>
 
-    <RepositoryUrl>https://github.com/zyahaya/secure-phrase-cli</RepositoryUrl>
+    <RepositoryUrl>https://github.com/zyahya/secure-phrase-cli</RepositoryUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
